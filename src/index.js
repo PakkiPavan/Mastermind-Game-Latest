@@ -1,30 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 //import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import MM1 from './MM1';
 import MMHome from './MMHome';
 import MMReducer from './MMReducer';
-import {BrowserRouter,Route,Link} from 'react-router-dom';
+//import {BrowserRouter,HashRouter,Route,Link,Switch} from 'react-router-dom';
+import {HashRouter,Route,Switch} from 'react-router-dom';
 import Rules from './Rules';
+import MatterTest from './MatterTest-1';
+import Simulator from './Test';
+
 const store=createStore(MMReducer);
 
 
-
 ReactDOM.render(
-	<BrowserRouter>
+	<HashRouter>
 		<div>
-			<center><h1 style={{color:'#863cbd',fontWeight:'900',fontFamily:"-webkit-body"}}>MASTERMIND</h1></center>
 			<Provider store={store}>
-				<Route exact path="/" component={MMHome}/>
-				<Route path="/rules" component={Rules}/>
-				<Route path="/play" component={MM1}/>	
+				<Switch>
+					<Route exact path="/" component={MMHome}/>
+					<Route path="/rules" component={Rules}/>
+					<Route path="/play" component={MM1}/>
+					<Route path="/matterjs" component={MatterTest}/>
+					<Route path="/simulator" component={Simulator}/>
+					<Route path="*" component={()=>"NOT FOUND"}/>
+				</Switch>
 			</Provider>
 		</div>
-	</BrowserRouter>,
+	</HashRouter>,
 	document.getElementById('root')
 );
 

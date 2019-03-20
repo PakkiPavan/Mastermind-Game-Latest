@@ -1,19 +1,19 @@
 import React from 'react';
 import './MM.css';
-import {BrowserRouter,Route,Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 /*
 At the beginning of each game the computer generates a secret code of four colors. <br/>
 The colors are always chosen from the seven colors. Duplicates are not allowed.<br/>
 The objective is to guess the secret code. You have to guess the colors and put them in the same order as they are in the secret code.<br/>
 Choose four colors in the next available row and then click on the Check button. The computer will score your guess in the following way: <br/>
-•For each guess that is right in both color and position you will get a green point <br/> 
+•For each guess that is right in both color and position you will get a green point <br/>
 •For each guess that is right in color but not in position you will get a red point<br/>
 You have ten chances to guess the correct code, if you exhaust all of them without guessing the code, you lost the game and the secret code will be displayed in the last row.<br/><br/>
 &emsp;Good Luck!
 
 
 */
-/* 
+/*
 	<p style={{textIndent:'1em',textAlign:'left'}}>At the beginning of each game a four color code will be generated.</p>
 	<p style={{textIndent:'1em',textAlign:'left'}}>The colors are always chosen from the seven colors in the top row. Duplicates are not allowed.</p>
 	<p style={{textIndent:'1em',textAlign:'left'}}>The objective is to guess the secret code. You have to guess the colors and put them in the same order as they are in the secret code.</p>
@@ -32,9 +32,10 @@ class Rules extends React.Component
 	{
 		return(
 			<div className="rules">
+				<center><h1 style={{color:'#863cbd',fontWeight:'900',fontFamily:"-webkit-body"}}>MASTERMIND</h1></center>
 				<Link to="/"><button className="button">Home</button><br/></Link>
 				<Link to="/play"><button className="button">Play game</button><br/></Link>
-				
+
 				<b>How to play?</b>
 				<ul>
 					<li>At the beginning of each game a four color code will be generated.</li>
@@ -51,7 +52,7 @@ class Rules extends React.Component
 					<li>You have ten chances to guess the correct code, if you exhaust all of them without guessing the code, you lost the game and the secret code will be displayed in the last row.</li>
 				</ul>
 				<center><b>Good Luck!!</b></center>
-				
+
 					<p>&copy; Copyrights Pavan Pakki 2019</p>
 			</div>
 		)
