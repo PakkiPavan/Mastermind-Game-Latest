@@ -16,7 +16,10 @@ Red color:represents one of the colors what you have have placed is there in the
 You have ten chances to guess the correct code, if you exhaust all of them without guessing the code, you lost the game and the secret code will be displayed in the last row.
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bb555d1374ea98f7dde19394de28528a292ebcf
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
